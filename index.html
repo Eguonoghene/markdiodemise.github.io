@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mark Diodemise | Premium Developer Portfolio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Manrope:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#690005",
+                        "surface-bright": "#31394d",
+                        "surface-tint": "#d2bbff",
+                        "tertiary": "#4cd7f6",
+                        "surface-dim": "#0b1326",
+                        "tertiary-fixed-dim": "#4cd7f6",
+                        "secondary-fixed-dim": "#adc6ff",
+                        "primary-fixed-dim": "#d2bbff",
+                        "surface-container-highest": "#2d3449",
+                        "inverse-surface": "#dae2fd",
+                        "primary-fixed": "#eaddff",
+                        "on-background": "#dae2fd",
+                        "outline": "#958da1",
+                        "on-secondary-fixed-variant": "#004395",
+                        "surface-container-lowest": "#060e20",
+                        "surface": "#0b1326",
+                        "on-primary": "#3f008e",
+                        "on-tertiary-fixed-variant": "#004e5c",
+                        "tertiary-fixed": "#acedff",
+                        "outline-variant": "#4a4455",
+                        "on-tertiary-container": "#b7efff",
+                        "secondary-fixed": "#d8e2ff",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#e6ecff",
+                        "surface-container-low": "#131b2e",
+                        "on-tertiary": "#003640",
+                        "on-primary-fixed": "#25005a",
+                        "primary": "#d2bbff",
+                        "on-surface": "#dae2fd",
+                        "inverse-on-surface": "#283044",
+                        "on-error-container": "#ffdad6",
+                        "secondary": "#adc6ff",
+                        "on-primary-fixed-variant": "#5a00c6",
+                        "surface-variant": "#2d3449",
+                        "error-container": "#93000a",
+                        "surface-container-high": "#222a3d",
+                        "surface-container": "#171f33",
+                        "tertiary-container": "#007184",
+                        "background": "#0b1326",
+                        "secondary-container": "#0566d9",
+                        "inverse-primary": "#732ee4",
+                        "on-surface-variant": "#ccc3d8",
+                        "on-secondary": "#002e6a",
+                        "on-primary-container": "#ede0ff",
+                        "on-secondary-fixed": "#001a42",
+                        "on-tertiary-fixed": "#001f26",
+                        "primary-container": "#7c3aed"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "md": "24px",
+                        "lg": "48px",
+                        "base": "8px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "xl": "80px",
+                        "gutter": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "code": ["monospace"],
+                        "label-caps": ["Manrope"],
+                        "h1": ["Space Grotesk"],
+                        "h3": ["Space Grotesk"],
+                        "h2": ["Space Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"]
+                    },
+                    "fontSize": {
+                        "code": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "h1": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "h3": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "h2": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(45, 52, 73, 0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.4);
+        }
+        .neumorphic-inset {
+            box-shadow: inset 2px 2px 5px rgba(0,0,0,0.5), inset -1px -1px 3px rgba(255,255,255,0.05);
+        }
+        .primary-gradient {
+            background: linear-gradient(135deg, #7c3aed 0%, #0566d9 100%);
+        }
+        .text-gradient {
+            background: linear-gradient(135deg, #d2bbff 0%, #4cd7f6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .mesh-bg {
+            background-color: #0b1326;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(5, 102, 217, 0.1) 0px, transparent 50%);
+        }
+        html { scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md mesh-bg min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 border-b border-white/10 bg-slate-950/40 backdrop-blur-md shadow-[0px_20px_40px_rgba(0,0,0,0.4)] h-20">
+<nav class="flex justify-between items-center px-8 h-full max-w-7xl mx-auto font-['Space_Grotesk'] text-sm font-medium tracking-wide">
+<div class="text-2xl font-bold tracking-tighter text-white">Mark Diodemise</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-violet-400 border-b-2 border-violet-500 pb-1 transition-all duration-300" href="#hero">Home</a>
+<a class="text-slate-400 hover:text-white hover:bg-white/5 px-3 py-1 rounded transition-all duration-300" href="#about">About</a>
+<a class="text-slate-400 hover:text-white hover:bg-white/5 px-3 py-1 rounded transition-all duration-300" href="#services">Services</a>
+<a class="text-slate-400 hover:text-white hover:bg-white/5 px-3 py-1 rounded transition-all duration-300" href="#cybersecurity">Case Study</a>
+<a class="text-slate-400 hover:text-white hover:bg-white/5 px-3 py-1 rounded transition-all duration-300" href="#portfolio">Portfolio</a>
+<a class="text-slate-400 hover:text-white hover:bg-white/5 px-3 py-1 rounded transition-all duration-300" href="#contact">Contact</a>
+</div>
+<a class="bg-primary-container text-on-primary-container px-6 py-2.5 rounded-full font-bold scale-95 active:scale-90 transition-transform" href="#contact">
+                Hire Me
+            </a>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-8 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 py-xl" id="hero">
+<div class="space-y-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary font-label-caps text-label-caps">
+<span class="material-symbols-outlined text-[14px]">terminal</span> Available for Projects
+                </div>
+<h1 class="font-h1 text-h1 text-white leading-tight">
+                    Full-Stack <br/>
+<span class="text-gradient">Web Developer</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    I build modern, scalable, and secure web solutions, bridging the gap between elegant UI/UX and robust backend systems.
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="primary-gradient text-white px-8 py-4 rounded-xl font-bold flex items-center gap-2 shadow-lg shadow-primary/20 hover:scale-105 transition-transform" href="#contact">
+                        Hire Me <span class="material-symbols-outlined">send</span>
+</a>
+<a class="glass-card px-8 py-4 rounded-xl font-bold border border-white/20 hover:bg-white/10 transition-colors" href="#portfolio">
+                        View Projects
+                    </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/20 blur-3xl rounded-full opacity-30 group-hover:opacity-50 transition-opacity"></div>
+<div class="relative glass-card p-4 rounded-[2rem] overflow-hidden border border-white/10">
+<img alt="Mark Diodemise Professional Portrait" class="w-full aspect-[4/5] object-cover rounded-[1.5rem]" data-alt="Professional studio portrait of a tech expert in a dark workspace with soft blue and violet ambient lighting, focused expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB26cn7Xf0DXPtHB5hcI4NmkVJjMFfHasQsIj7ZytIm-udsrXw01kV_gAvpS9cxSoRMmbAl7SDpeqf6lljHqBLtmWBvyLVOMjQf6Y9yIQv_9DLHsrNVCy7cU45XUY66yp51ckhB1ix1JY6iB6YebGGBPCTeQGmpwfXOKxuz_SsivqTpqeUm7GHgeElbWkEy3czI5lWiDNFYIrak5V0RYXzlDGa4FIzziZFa02HA32dY__B-gIUIzW6qqdoHnFqaH_5E3gU1fTvqUdkW"/>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl px-8 max-w-7xl mx-auto" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div class="space-y-8">
+<div>
+<h2 class="font-h2 text-h2 text-white mb-4">The Architect of Digital Solutions</h2>
+<div class="h-1.5 w-24 primary-gradient rounded-full"></div>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Based in Port Harcourt, Nigeria, **Mark Diodemise Eguonoghene** is a multidisciplinary engineer specializing in end-to-face web development. With a foundation built on precision and security, I transform complex business requirements into seamless digital experiences.
+                    </p>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="glass-card p-6 rounded-2xl text-center">
+<div class="text-h3 font-h3 text-primary mb-1">5+</div>
+<div class="font-label-caps text-label-caps text-slate-400">Years Experience</div>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center">
+<div class="text-h3 font-h3 text-tertiary mb-1">50+</div>
+<div class="font-label-caps text-label-caps text-slate-400">Projects Built</div>
+</div>
+<div class="glass-card p-6 rounded-2xl text-center">
+<div class="text-h3 font-h3 text-secondary mb-1">100%</div>
+<div class="font-label-caps text-label-caps text-slate-400">Secure Code</div>
+</div>
+</div>
+</div>
+<div class="glass-card p-8 rounded-3xl border border-white/10 space-y-6">
+<h3 class="font-h3 text-h3 text-white">Technical Arsenal</h3>
+<div class="flex flex-wrap gap-3">
+<span class="px-4 py-2 bg-on-primary-fixed-variant/20 border border-primary/20 rounded-full text-primary text-sm font-medium">PHP/Laravel</span>
+<span class="px-4 py-2 bg-on-secondary-fixed-variant/20 border border-secondary/20 rounded-full text-secondary text-sm font-medium">React / UI Components</span>
+<span class="px-4 py-2 bg-on-tertiary-fixed-variant/20 border border-tertiary/20 rounded-full text-tertiary text-sm font-medium">Cybersecurity Architecture</span>
+<span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium">Apache / Server Admin</span>
+<span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium">Figma Design</span>
+<span class="px-4 py-2 bg-white/5 border border-white/10 rounded-full text-white text-sm font-medium">SQL Hardening</span>
+</div>
+<div class="p-6 neumorphic-inset rounded-2xl bg-surface-container-lowest/50">
+<p class="italic text-slate-400 text-sm">"Code is poetry, but security is the foundation upon which that poetry must stand. I don't just build websites; I engineer digital fortresses."</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface-dim/40 relative" id="services">
+<div class="px-8 max-w-7xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-h2 text-h2 text-white mb-4">Expert Services</h2>
+<p class="text-on-surface-variant max-w-2xl mx-auto">Tailored engineering solutions designed for high-performance and absolute reliability.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Card 1 -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-primary/20">
+<div class="w-12 h-12 rounded-xl primary-gradient flex items-center justify-center mb-6 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-white">code</span>
+</div>
+<h3 class="font-h3 text-xl text-white mb-3">Web Development</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Scalable full-stack applications using Laravel and modern JavaScript frameworks.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-tertiary/20">
+<div class="w-12 h-12 rounded-xl bg-tertiary-container flex items-center justify-center mb-6 shadow-lg shadow-tertiary/20">
+<span class="material-symbols-outlined text-white">design_services</span>
+</div>
+<h3 class="font-h3 text-xl text-white mb-3">UI/UX Design</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Glassmorphic and neumorphic interfaces focused on conversion and user delight.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-error/20">
+<div class="w-12 h-12 rounded-xl bg-error-container flex items-center justify-center mb-6 shadow-lg shadow-error/20">
+<span class="material-symbols-outlined text-white">security</span>
+</div>
+<h3 class="font-h3 text-xl text-white mb-3">Cybersecurity</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Web-based threat prevention, SQLi mitigation, and server hardening strategies.</p>
+</div>
+<!-- Card 4 -->
+<div class="glass-card p-8 rounded-2xl group hover:-translate-y-2 transition-all duration-300 border-t-2 border-t-secondary/20">
+<div class="w-12 h-12 rounded-xl bg-secondary-container flex items-center justify-center mb-6 shadow-lg shadow-secondary/20">
+<span class="material-symbols-outlined text-white">speed</span>
+</div>
+<h3 class="font-h3 text-xl text-white mb-3">Optimization</h3>
+<p class="text-on-surface-variant text-sm leading-relaxed">Lighthouse score perfection, asset minification, and database query tuning.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Cybersecurity Case Study -->
+<section class="py-xl px-8 max-w-7xl mx-auto" id="cybersecurity">
+<div class="glass-card rounded-[2.5rem] p-8 md:p-16 border border-white/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-8 opacity-10">
+<span class="material-symbols-outlined text-[120px]">verified_user</span>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<div class="lg:col-span-7 space-y-8">
+<div>
+<span class="text-primary font-label-caps text-label-caps uppercase">Elite Case Study</span>
+<h2 class="font-h2 text-h2 text-white mt-2">Server Hardening &amp; Web Security Implementation</h2>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<p class="text-white font-bold text-sm">SQL Injection Prevention</p>
+<p class="text-slate-400 text-xs">Parameterized queries &amp; input sanitization</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<p class="text-white font-bold text-sm">XSS &amp; CSRF Protection</p>
+<p class="text-slate-400 text-xs">Validation tokens &amp; CSP implementation</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<p class="text-white font-bold text-sm">Permission Hardening</p>
+<p class="text-slate-400 text-xs">Optimal 644/755 chmod structures</p>
+</div>
+</div>
+<div class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary">check_circle</span>
+<div>
+<p class="text-white font-bold text-sm">Real-time Monitoring</p>
+<p class="text-slate-400 text-xs">ModSecurity &amp; custom .htaccess filters</p>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h4 class="text-white font-bold">Tech Stack:</h4>
+<div class="flex gap-4">
+<span class="glass-card px-4 py-2 rounded-lg text-xs font-code">cPanel</span>
+<span class="glass-card px-4 py-2 rounded-lg text-xs font-code">PHP 8.x</span>
+<span class="glass-card px-4 py-2 rounded-lg text-xs font-code">Apache</span>
+<span class="glass-card px-4 py-2 rounded-lg text-xs font-code">SSL/TLS</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-cols-2 gap-3 h-fit">
+<img alt="File Access Logs" class="rounded-xl border border-white/10 hover:scale-105 transition-transform cursor-pointer aspect-video object-cover" data-alt="Digital interface showing file system access logs with secure encrypted timestamps and user activity tracking" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUuaVtIaVmXjI6CRPVjx87M8t5T3hx2c5VzDuSLz3O6Cog91_d9heFZsC9wXDkfrAwK9eoUgHYofwSv-yJI0QwKKpU_G0LXNj5HKqUuqTvLaAHkwQnQ3T621EC17AKLo4AqVjKIqXn3zAZoGDs6xk5Hw9nx_aq2c2m_DPdHt27Co0sRUxBfDhfdkBy77puvRxVf-yXHM-x-0E9jpVhtAwxllTiQ1XSqTYw04rIDYJQAPDGcMiE8PASodWkT98-KQVxGG-R6I258GvB"/>
+<img alt="Backup Systems" class="rounded-xl border border-white/10 hover:scale-105 transition-transform cursor-pointer aspect-video object-cover" data-alt="Modern server backup dashboard with green success indicators and automated scheduling visualization" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqrM0SNmVFmC955eakZBFc2VdcrSf7SCuWeIEx2t5PQtq6Q1JzrO6A3LfAY5ryOsFOEqtrbz5UFvzUHsNn60CrHNn0i0dcecrkuOhMjhC70nPk-kYc16WATplfrlw3bP4FzAk6FZyQZXuVV8bJMvZCC6QxPFPgwKvlF8bC331WG4D-14N2TQyK99dovFsIimJvbhZ7BHU-X1tYRGigV5AvoW7ZcLoP2E2s0jhWaYwGXk_KIMqpoJiorMvdPsM69M7ylR0jfM-GIOhY"/>
+<img alt="File Permissions" class="rounded-xl border border-white/10 hover:scale-105 transition-transform cursor-pointer aspect-video object-cover" data-alt="Technical view of server directory permissions showing numeric chmod values and restricted access protocols" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyTOiRfZfMliyZYvaDaqLrQe7BVdPOcZlYD9GOAV5w_atrrtPF_465CV1F6dWH6Mm_DgdbMWjTMYDbGPKysM6NgWK-9IupDT96HAbxfnMWfkEswk0l8OpZCqr0Sm9hD1qYAK44QQGdIAf5GlMKtmT6b3-Q8P5NkSp-V84j--f_exLvc3WI5WLuXicHktcNCY3gK-HRDM1NWqHRzAIjPK38iFt6iuQNZQa9TJkOQ9YyyFjC0Mwpt69fMJ2G5P5j7t4bJb4jRLdi2_gf"/>
+<img alt="Security Monitoring" class="rounded-xl border border-white/10 hover:scale-105 transition-transform cursor-pointer aspect-video object-cover col-span-2" data-alt="Cybersecurity monitoring dashboard with real-time threat detection graphs and network traffic analysis" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7-RG4RdG8pCBLQA_xMdLHqoKb31OHkTW8CWpun-KRu2p3AJbSLkAJL0jnc2APNl6OhTk5Fle5JVKNfPAHzNPhcbNnXdm64yr2l_xzjJMfAAgLdpniR0i85RCiOlknjsMriETvwb8cNYkmU6M5l96LVRwMk_LATl6dkLVznRh79LoPEzh-F_FpPfa9aahORIJ13wOPX7A3iDbmMusf8eGg9jeC2dyDe38VtfEaMgKsOJ1YGJQSAeWccZpzXL_HXnbjbsQsPbWp9X53"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Portfolio Section -->
+<section class="py-xl px-8 max-w-7xl mx-auto" id="portfolio">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-h2 text-h2 text-white">Project Showcase</h2>
+<p class="text-on-surface-variant">A curated selection of my latest engineering feats.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<a class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 block" href="https://tech.qmia.com.ng/" target="_blank">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-white text-5xl opacity-20 group-hover:scale-110 transition-transform">school</span>
+</div>
+<div class="p-8">
+<h4 class="font-h3 text-xl text-white mb-2">Online Tech Training</h4>
+<p class="text-slate-400 text-sm mb-4">Interactive learning platform for emerging technologies and digital skills.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Web Platform</span>
+</div>
+</div>
+</a>
+<!-- Project 2 -->
+<a class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 block" href="https://qmia.com.ng/" target="_blank">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-white text-5xl opacity-20 group-hover:scale-110 transition-transform">business</span>
+</div>
+<div class="p-8">
+<h4 class="font-h3 text-xl text-white mb-2">QMIA Enterprise</h4>
+<p class="text-slate-400 text-sm mb-4">Corporate ecosystem management with integrated business tools and portal.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-secondary">Enterprise</span>
+</div>
+</div>
+</a>
+<!-- Project 3 -->
+<a class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 block" href="https://solutions.qmia.com.ng/" target="_blank">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-white text-5xl opacity-20 group-hover:scale-110 transition-transform">lightbulb</span>
+</div>
+<div class="p-8">
+<h4 class="font-h3 text-xl text-white mb-2">QMIA Solutions</h4>
+<p class="text-slate-400 text-sm mb-4">Customized solution delivery engine for modern business challenges.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-tertiary">Consultancy</span>
+</div>
+</div>
+</a>
+<!-- Project 4 -->
+<a class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 block" href="https://divine26.ct.ws/?i=1" target="_blank">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-white text-5xl opacity-20 group-hover:scale-110 transition-transform">favorite</span>
+</div>
+<div class="p-8">
+<h4 class="font-h3 text-xl text-white mb-2">Wedding Site</h4>
+<p class="text-slate-400 text-sm mb-4">Elegant event planning and invitation management system.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-pink-400">UI/UX Focus</span>
+</div>
+</div>
+</a>
+<!-- Project 5 -->
+<a class="group relative overflow-hidden rounded-3xl glass-card border border-white/10 block" href="https://www.figma.com/design/LTaCaDbg6UP4QlfvPuffnF/Untitled?node-id=2-2&amp;t=aQmW0KjacfqE2eFN-1" target="_blank">
+<div class="aspect-video bg-surface-container-highest flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-white text-5xl opacity-20 group-hover:scale-110 transition-transform">shopping_cart</span>
+</div>
+<div class="p-8">
+<h4 class="font-h3 text-xl text-white mb-2">E-commerce UI/UX</h4>
+<p class="text-slate-400 text-sm mb-4">Advanced Figma design for a seamless shopping experience.</p>
+<div class="flex gap-2">
+<span class="text-[10px] uppercase tracking-widest font-bold text-primary">Prototype</span>
+</div>
+</div>
+</a>
+<!-- Coming Soon -->
+<div class="group relative overflow-hidden rounded-3xl glass-card border border-white/5 border-dashed block opacity-50">
+<div class="aspect-video flex items-center justify-center p-6">
+<span class="material-symbols-outlined text-white text-5xl opacity-10">lock</span>
+</div>
+<div class="p-8">
+<h4 class="font-h3 text-xl text-white mb-2">Cybersecurity Vault</h4>
+<p class="text-slate-400 text-sm mb-4">Confidential security implementation project coming soon.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl px-8 max-w-7xl mx-auto" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div class="space-y-8">
+<div>
+<h2 class="font-h2 text-h2 text-white">Let's Build Something Robust</h2>
+<p class="text-on-surface-variant mt-4">Whether it's a secure web application or a conversion-focused design, I'm ready to bring your vision to life.</p>
+</div>
+<div class="space-y-6">
+<a class="flex items-center gap-4 glass-card p-4 rounded-2xl border border-white/10 hover:bg-white/5 transition-colors" href="mailto:mdiodemise@gmail.com">
+<div class="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="text-white">mdiodemise@gmail.com</span>
+</a>
+<a class="flex items-center gap-4 glass-card p-4 rounded-2xl border border-white/10 hover:bg-white/5 transition-colors" href="tel:+2349035324394">
+<div class="w-10 h-10 rounded-xl bg-tertiary/10 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="text-white">+234 903 532 4394</span>
+</a>
+<a class="flex items-center gap-4 glass-card p-4 rounded-2xl border border-white/10 hover:bg-white/5 transition-colors" href="https://www.linkedin.com/in/mark-diodemise-9536a0185" target="_blank">
+<div class="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined">link</span>
+</div>
+<span class="text-white">LinkedIn Profile</span>
+</a>
+</div>
+</div>
+<div class="glass-card p-8 md:p-10 rounded-[2rem] border border-white/10">
+<form class="space-y-6">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-slate-400">Name</label>
+<input class="w-full bg-surface-container-lowest/50 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-0 neumorphic-inset" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-slate-400">Email</label>
+<input class="w-full bg-surface-container-lowest/50 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-0 neumorphic-inset" placeholder="john@example.com" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-slate-400">Message</label>
+<textarea class="w-full bg-surface-container-lowest/50 border border-white/10 rounded-xl p-4 text-white focus:border-primary focus:ring-0 neumorphic-inset" placeholder="Tell me about your project..." rows="4"></textarea>
+</div>
+<button class="w-full primary-gradient text-white py-5 rounded-xl font-bold text-lg hover:scale-[1.02] active:scale-95 transition-all shadow-xl shadow-primary/20" type="submit">
+                            Send Secure Message
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-white/10 mt-20 bg-slate-950">
+<div class="flex flex-col md:flex-row justify-between items-center py-12 px-8 max-w-7xl mx-auto gap-6 font-['Space_Grotesk'] text-xs uppercase tracking-widest text-slate-500">
+<div class="text-lg font-black text-white normal-case">Mark Diodemise</div>
+<div class="flex gap-8">
+<a class="hover:text-violet-300 transition-colors opacity-80 hover:opacity-100" href="https://www.linkedin.com/in/mark-diodemise-9536a0185">LinkedIn</a>
+<a class="hover:text-violet-300 transition-colors opacity-80 hover:opacity-100" href="#">GitHub</a>
+<a class="hover:text-violet-300 transition-colors opacity-80 hover:opacity-100" href="#">Twitter</a>
+<a class="hover:text-violet-300 transition-colors opacity-80 hover:opacity-100" href="#">Resume</a>
+</div>
+<div class="text-center md:text-right">
+                © 2024 Mark Diodemise. Engineered for precision.
+            </div>
+</div>
+</footer>
+</body></html>
